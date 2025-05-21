@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finca Colonial - Escapadas y Celebraciones</title>
+  <style>
+    :root {
+      --color-fondo: #847b6d;
+      --color-acento: #8d746a;
+      --color-texto: #333;
+      --color-btn: #8f6a54;
+      --color-header: #7a7f89;
+      --color-fondo-claro: #f5f1ed;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-fondo-claro);
+      color: var(--color-texto);
+    }
+
+    header.hero {
+      background-color: var(--color-header);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .whatsapp-btn {
+      background-color: var(--color-btn);
+      border: none;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .descripcion, .galeria, .videos {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .descripcion {
+      background-color: white;
+    }
+
+    .descripcion p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .galeria {
+      background-color: var(--color-fondo);
+      color: white;
+    }
+      
+
+    .grid-galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+
+
+@media (max-width: 768px) {
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-galeria {
+    grid-template-columns: 1fr;
+  }
+}
+      
+
+    .grid-galeria img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 180px;
+    }
+
+    .videos {
+      background-color: var(--color-fondo-claro);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 480px;
+      height: 270px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    footer {
+      background-color: var(--color-header);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .whatsapp-btn {
+        width: 100%;
+      }
+    }
+
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece la imagen para legibilidad */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+      
+  </style>
+</head>
+<body>
+
+<header class="hero" style="background-image: url('portada.jpg');">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>Escápate a Nuestra Finca Colonial</h1>
+      <p>Un lugar perfecto para descansar, celebrar y reconectar con la naturaleza.</p>
+      <button class="whatsapp-btn" onclick="openWhatsApp()">Reserva ahora por WhatsApp</button>
+    </div>
+  </div>
+</header>
+
+
+
+  <section class="descripcion">
+    <h2>Un lugar idílico para crear recuerdos inolvidables</h2>
+    <p>
+      Bella finca para descansar y celebrar cumpleaños, aniversarios o bodas. 
+      Rodeada de naturaleza, con amplias zonas verdes y arquitectura colonial. 
+      4 cabañas, 6 habitaciones, 8 camas cómodas, excelente lencería, 6 baños, 
+      cocina equipada, zona BBQ y fogata. Disfruta vistas al valle y a la montaña, 
+      TV con Netflix, estacionamiento privado y paseos en bicicleta.
+    </p>
+  </section>
+
+  <section class="galeria">
+    <h2>Galería</h2>
+    <div class="grid-galeria">
+      <img src="img1.jpg" alt="Interior sala colonial">
+      <img src="img2.jpg" alt="Cama doble decorada">
+      <img src="img3.jpg" alt="Zona de trabajo con luz natural">
+      <img src="img4.jpg" alt="Jardín con montañas al fondo">
+      <img src="img5.jpg" alt="Espacio romántico con vino">
+      <img src="img6.jpg" alt="Vista exterior de la finca">
+    </div>
+  </section>
+    
+  <section class="videos">
+    <h2>Explora la experiencia</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/kz6ik4bIOQg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/w2E4GMb8T7s" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Finca Colonial en el Valle. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function openWhatsApp() {
+      window.open('https://wa.me/573001112233', '_blank');
+    }
+  </script>
+
+</body>
+</html>
